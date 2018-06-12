@@ -4,7 +4,7 @@ import { Observer } from 'rxjs/Observer';
 import { map, catchError } from 'rxjs/operators';
 import { take } from 'rxjs/operators';
 
-import * as socketCluster from 'socketcluster-es6-client';
+import * as socketCluster from 'socketcluster-client-edge';
 
 @Injectable()
 export class SocketService {
