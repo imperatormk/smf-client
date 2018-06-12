@@ -1,0 +1,182 @@
+#post-fight-wrapper{
+	margin-bottom: 12px;
+}
+#post-fight-form{
+	clear: both;
+	display: none;
+    padding: 8px 20px;
+	/*margin-top: 10px;*/
+}
+#post-fight-form .tab-content {
+	min-height: 245px;
+	height: 100%;
+}
+#post-fight-form input, #post-fight-form textarea {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	-webkit-transition: border-color 1s linear; /* Saf3.2+, Chrome */
+	-moz-transition: border-color 1s linear; /* FF3.7+ */
+	-o-transition: border-color 1s linear; /* Opera 10.5 */
+	transition: border-color 1s linear;
+}
+#post-fight-form textarea {
+	padding-left: 8px;
+	padding-right: 8px;
+	resize: none;
+}
+.mentions-input-box .mentions{
+	display: none;
+}
+#post-fight-form #add-options {
+	margin-top: 12px;
+}
+#post-fight-toggle{
+	margin:0;
+	cursor: pointer;
+	text-align: center;
+    font-size: 36px;
+}
+#post-fight-form fieldset{
+	border: 0;
+	padding: 4px;
+}
+#post-fight-form legend{
+	font-weight: 600;
+}
+#post-fight-form .accordion-title{
+    text-align: left;
+}
+#post-fight-form .accordion-title.active a:hover{
+	color: white;
+}
+#post-fight-form .post-help{
+	font-style: italic;
+	font-size: 13px;
+	display: block;
+	clear:both;
+}
+#post-fight-form .myside{
+	box-shadow: 0px 0px 6px rgb(250, 224, 87);
+}
+#post-fight-form .chzn-container .chzn-results .active-result{
+	line-height: 1.2em;
+	font-size: 1.4em;
+	text-indent: 10px;
+}
+#post-fight-form input[type="checkbox"]{
+	outline: 0;
+	vertical-align: bottom;
+}
+#post-fight-tabs {
+	/*margin-top: 10px;*/
+    border:0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 6px;
+}
+#post-fight-tabs i {
+	margin-right: 0px !important;
+}
+#postFightPreview {
+	margin-top: 15px;
+}
+#postfight-duration {
+	margin-top: 5px;
+}
+.fileUploadPreview img {
+	border: 1px solid #dddddd;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+#post-fight-form .col-xs-4 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#post-fight-tabs li:last-child{
+    float: right;
+}
+#post-fight-tabs li a {
+	cursor: pointer;
+}
+#post-fight-tabs li.active a {
+	cursor: default;
+}
+#post-fight-tabs li a.warning {
+	background-color: #ff7361;
+}
+#post-fight-p{
+	display: none;
+}
+#post-fight-form #post-days {
+	font-size: 1.2em;
+	color:#ff7361;
+	font-weight: bold;
+}
+.post-fight-icon-circle {
+    height: 36px;
+    width: 36px;
+    font-size: 22px;
+    line-height: 36px;
+    color: white;
+    vertical-align: middle;
+    background-color: #ff7361;
+}
+
+.post-fight-icon-circle i {
+	margin-right: 0 !important;
+}
+.post-fight-icon-close {
+	float: right;
+	/*margin-right: -15px;*/
+}
+.post-fight-icon-close i:before {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: rgba(255, 115, 97, 0.8);
+	cursor: pointer;
+}
+#postFightPublicPrivate.dd-container img {
+    height: 32px;
+    opacity: 0.8;
+    width: 32px;
+}
+#postFightPublicPrivate .dd-select, #postFightPublicPrivate .dd-options li {
+	min-width: 216px;
+	padding-bottom: 0px;
+}
+#postFightPublicPrivate .dd-selected, #postFightPublicPrivate .dd-option {
+	padding: 8px;
+}
+#postFightPublicPrivate .dd-selected-text, #postFightPublicPrivate .dd-option-text {
+	line-height: 15px;
+}
+.post-fight-tabs-nav{	
+  color: black;
+  font-size: 20px;
+}
+.tab-pane h4{
+	margin-bottom: 4px;
+}
+
+.widget ul li.input{
+	overflow: initial;
+}
+.dz-progress{
+	display: none;
+}
+#post-fight-form.dropzone{
+	border:none;
+}
+.post-attachment-delete-link{
+	position: absolute;
+	top: -2px;
+	right: 0;
+	z-index: 99;
+}
+.post-attachment-delete-link i:before {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: rgb(255, 115, 97);
+	cursor: pointer;
+}

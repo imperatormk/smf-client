@@ -1,0 +1,72 @@
+<br>
+<div style="text-align:center;">
+	<div *ngIf="user?.username; else loginToPost">
+		<h2 (click)="toggleNewFight()">Post a Fight!</h2>
+	</div>
+	<ng-template #loginToPost>
+		<p>Please login to post</p>
+	</ng-template>
+</div>
+<ng-container *ngxPermissionsOnly="'postFight'">
+<div *ngIf="showNewFight" style="text-align:center">
+	<p>Present your argument to the world's biggest jury</p>
+
+    <div class="col-xs-12 tabs-below dropzone" style="background-color:white;padding:20px;"> 
+        <ul class="nav nav-tabs col-md-12 col-xs-12">
+            <li class="nav-item post-fight-tabs-nav" [class.disabled]="!curFormStep>0" (click)="setCurStep(curFormStep-1)">
+            	<a class="nav-link" data-dir="prev"><i class="fa fa-arrow-left"></i></a>
+        	</li>
+            <li class="nav-item" [class.active]="curFormStep === i" (click)="setCurStep(i)" *ngFor="let step of steps;let i=index">
+                <a href="javascript:void(0)" class="nav-link"><i [class]="'fa fa-' + step"></i></a>
+            </li>
+            <li class="nav-item post-fight-tabs-nav" [class.disabled]="curFormStep>=steps.length-1" (click)="setCurStep(curFormStep+1)">
+            	<a class="nav-link"><i class="fa fa-arrow-right"></i></a>
+        	</li>
+        </ul>
+    
+        <div class="tab-content">
+            <div class="tab-pane" [class.active]="curFormStep===0">	
+                <div class="form-inputs clearfix">
+                    <h4 class="accordion-title">Describe the Fight</h4>
+                    <input [(ngModel)]="newFight.title" class="col-md-12" type="text" required="required" name="title" placeholder="Put a title to your fight">
+                	<div class="mentions-input-box">
+                    	<textarea [(ngModel)]="newFight.description" class="col-md-12" rows="5" name="description" placeholder="Describe your argument to the public"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" [class.active]="curFormStep===1">	
+                <div class="form-inputs centertext">
+                    <h4 class="accordion-title">Parties Involved</h4>
+                    <div *ngFor="let party of newFight.parties; let i = index">
+                        <input type="text" class="form-control" required="required" [(ngModel)]="party.name" maxlength="20">
+                    </div>
+                    <span (click)="addParty()" class="btn btn-warning" id="add-options">+ Add more parties to the fight</span>
+                </div>
+            </div>
+            <div class="tab-pane" [class.active]="curFormStep===2">
+            	<div class="form-inputs centertext">
+                	<h4 class="accordion-title">Fight Details</h4>
+                	<tag-input [theme]="'smf-theme'" [(ngModel)]="newFight.categories" [secondaryPlaceholder]="'Pick categories'" [placeholder]="'+ Category'" [separatorKeyCodes]="[13, 44]" [onlyFromAutocomplete]="true" [maxItems]="2" [identifyBy]="'_id'" [displayBy]="'name'">
+    					<tag-input-dropdown [showDropdownIfEmpty]="true" [identifyBy]="'_id'" [displayBy]="'name'" [autocompleteItems]="categories">
+    					</tag-input-dropdown>
+					</tag-input>
+                	<tag-input [theme]="'smf-theme'" [(ngModel)]="newFight.tags" [placeholder]="'+ Tag'" [addOnBlur]="'true'" [separatorKeyCodes]="[13, 32, 186, 188]" [maxItems]="10" [identifyBy]="'tagText'" [displayBy]="'tagText'">
+					</tag-input>
+                </div>
+            </div>
+            <div class="tab-pane" [class.active]="curFormStep===3">
+            	<div class="form-inputs centertext">
+                	<h4 class="accordion-title">Upload Images</h4>
+            	</div>
+            </div>
+            <div class="tab-pane" [class.active]="curFormStep===4">
+            	<div class="form-inputs centertext">
+                	<h4 class="accordion-title">Finalize</h4>
+                	<re-captcha [hidden]="captchaSolved" (resolved)="handleCorrectCaptcha($event)" siteKey="6LdeBkgUAAAAABm1zGq6CwWEFj8oG5xVyzU3PtOR"></re-captcha>
+  	            	<button class="btn btn-default" *ngIf="captchaSolved" (click)="postFight()">Post fight</button>
+            	</div>
+            </div>
+        </div> 
+    </div>
+</div>
+</ng-container>

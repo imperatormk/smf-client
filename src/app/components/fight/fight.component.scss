@@ -1,0 +1,30 @@
+.boxedDiv {
+	// border: 1px solid #0275d8;
+	border-radius: 5px;
+	margin-bottom: 0px;
+	background-color: white;
+}
+
+.paddedDiv {
+	padding: 10px 10px 10px 10px;
+}
+
+.comment {
+	.thumb-up {
+    	color: #42f44e;
+	}
+	.thumb-up-voted {
+    	color: #0f9931;
+	}
+
+	.thumb-down {
+    	color: #f73364;
+	}
+	.thumb-down-voted {
+    	color: #e50202;
+	}
+}
+
+.voted {
+	background-color: lightgray;
+}

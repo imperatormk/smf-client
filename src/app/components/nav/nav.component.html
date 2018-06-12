@@ -1,0 +1,50 @@
+<div *ngIf="showLogin" class="login-panel" style="display: block;">
+	<section class="container">
+		<div class="row" style="margin: 0px;">
+			<div class="col-md-6">
+				<div class="page-content">
+					<h2>Login</h2>
+					<div class="form-style form-style-3">
+							<div class="form-inputs clearfix">
+								<p class="login-text">
+									<input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" type="text" name="email" id="email" value="" placeholder="Email/Username">
+									<i class="icon-user"></i>
+								</p>
+								<p class="login-password">
+									<input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" name="password">
+									<i class="icon-lock"></i>
+								</p>
+							</div>
+							<p class="form-submit login-submit">
+								<button (click)="authRegular()" class="button color small login-submit submit">Log-in</button>
+							</p>
+					</div>
+				</div><!-- End page-content -->
+			</div><!-- End col-md-6 -->
+			<div class="col-md-6">
+				<div class="page-content Register">
+					<h2>Register Now</h2>
+					<a id="register-button" href="" class="button color small">Create an account</a><a href="" class="button small blue-button">Sign up with Facebook</a>
+				</div><!-- End page-content -->
+			</div><!-- End col-md-6 -->
+		</div>
+	</section>
+</div>
+
+<div class="fill-bg-main row equal" style="padding:10px;margin:0px;">
+	<div class="col-md-3" style="text-align: center;">
+    	<img style="max-height:36px;" src="http://geniusdemo.eu/front/images/logo.png" alt="logo" />
+	</div>
+	<div class="col-md-6 centered">
+    	<h1 class="title">Solve My Fight</h1>
+	</div>
+	<div class="col-md-3 centered">
+    	<div *ngIf="!user?.username; else userDash">
+        	<a href="javascript:void(0);" role="button" (click)="toggleLoginModal()"><span class="bigLabel">Login</span></a>
+    	</div>
+    	<ng-template #userDash>
+        	<span class="bigLabel"> {{ user.username }} </span>
+        	<a href="javascript:void(0);" role="button" (click)="logout()"><span class="bigLabel">Logout</span></a>
+        </ng-template>
+	</div>
+</div>

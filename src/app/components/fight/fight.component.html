@@ -1,0 +1,56 @@
+<div class="boxedDiv">
+	<div class="paddedDiv">
+		<a routerLink="/user/{{ fight.posterUser.id }}" routerLinkActive="active" class="fight-username colormain">{{ fight.posterUser.username }}</a>
+	</div>
+<hr>
+<div class="paddedDiv">
+<h4><a href="fight/{{ fight._id }}">{{ fight.title }}</a></h4>
+<p>{{ fight.description }}</p>
+<div class="custBox">
+	<ul *ngFor="let party of fight.parties">
+		<li id="{{ party._id }}">
+			<h4>{{ party.name }}</h4>
+        	<div *ngIf="fight.status != 2; else showWinner">
+				<div *ngxPermissionsOnly="['voteOnFight']">
+	            	<div *ngIf="getVotedParty(); else voteMe; let votedParty">
+	                	<span style="padding: 5px;" [class.voted]="party._id === votedParty">Vote count: {{ party.votes.length }}</span><br><br>
+	            	</div>
+	            	<ng-template #voteMe>
+	                	<button (click)="voteOnFight(party)" class="btn btn-default">Vote me</button><br><br>
+	            	</ng-template>
+	        	</div>
+        	</div>
+        	<ng-template #showWinner>
+            	<span *ngIf="party.isWinner">Looks like we have a winner!</span>
+	        </ng-template>
+        	<hr><br>
+		</li>
+	</ul>
+</div>
+<br>
+Tags: <span *ngFor="let tag of fight.tags">{{ tag.tagText }} </span>
+<br>
+<div *ngxPermissionsOnly="['postComment']">
+	<input [(ngModel)]="newComment.content" class="form-control" (keyup.enter)="postComment($event)" type="text" placeholder="Comment..." />
+</div>
+<div class="boxedDiv comment" *ngFor="let comment of fight.comments">
+	<span>{{ comment.content }}</span>
+	<br><br>
+	<span> 
+    	<a  routerLink="/user/{{ comment.posterUser.id }}" routerLinkActive="active">{{ comment.posterUser.username }}</a>
+    	<br>
+    	{{ comment.datePosted | date:"dd MMM yyyy, HH:mm" }}
+	</span>
+<div style="text-align:left;">
+	<a href="javascript:void(0);" role="button" (click)="voteOnComment(comment, 'up')">
+		<i [ngClass]="(comment?.userVote > 0) ? 'thumb-up-voted' : 'thumb-up'" class="fa fa-thumbs-up"></i>
+	</a>
+	<span>{{ comment.totalPoints }}</span>
+	<a href="javascript:void(0);" role="button" (click)="voteOnComment(comment, 'down')">
+		<i [ngClass]="(comment?.userVote < 0) ? 'thumb-down-voted' : 'thumb-down'" class="fa fa-thumbs-down"></i>
+	</a>
+</div>
+</div>
+</div>
+</div>
+<br>

@@ -1,0 +1,7 @@
+<div class="widget_tag_cloud panelBox">
+	<h3 class="widget_title">Recent Activity</h3>
+	<div class="widget_body">
+		<span *ngFor="let activity of activities; let i=index" href="javascript:void(0)"><span [innerHTML]="activity.actObj.text"></span></span>
+    	<span *ngIf="activities.length == 0">No recent activity...</span>
+	</div>
+</div>

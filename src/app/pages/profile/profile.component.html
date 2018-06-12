@@ -1,0 +1,255 @@
+<div *ngIf="profileLoaded">
+<br>
+<div class="text-center">
+	<h2>About {{ user.username }}</h2>
+</div>
+<div class="row" style="margin: 0px;">
+   <div class="col-md-3">
+	  <p></p> <!-- left panel -->
+   </div>
+   <div class="col-md-6">
+      <div class="userProfileMidSection" style="background: white;padding-top: 0; padding-left: 0;padding-right: 0;">
+         <!-- <h2>About iSolve</h2> -->
+         <div class="page-content userBioHolder">
+            <div class="userBioBgImage" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('http://geniusdemo.eu/profilebg.jpg');    padding-top: 17px;
+               padding-bottom: 6px;
+               padding-left: 15px;
+               padding-right: 15px;
+               margin-left: -10px;
+               margin-right: -10px;
+               border-bottom: 4px solid #FF7361;">
+               <div class="user-profile-img"><a class="user-popover" data-user-id="38" data-original-title="" title="">
+                  <img alt="iSolve" src="http://geniusdemo.eu/avatars/u38532.jpg?ver=I50TCR">
+                  </a>
+               </div>
+               <div class="ul_list ul_list-icon-ok about-user">
+                  <ul>
+                     <li>
+                        <span style="color: #FF7361;font-size: 20px;"><strong>{{ user.username }}</strong></span>
+                        <span class="pull-right" style="color: white!important;"><i class="icon-calendar"></i>DoB: <span style="color: white!important;"><strong>{{ user.dateOfBirth | amDateFormat: 'DD/MM/YYYY' }}</strong></span></span>			
+                     </li>
+                     <li>
+                     	<span style="color: white!important;">Gender: </span><span style="color: white!important;"><strong>{{ user.getGender() }}</strong></span>
+                        <span style="color: white!important;" class="pull-right">Registered: <span style="color: white!important;"><strong>{{ user.memberSince | amTimeAgo }}</strong></span></span>
+                     </li>
+                  </ul>
+               </div>
+               <!-- 		 <p>I&#039;m here to run shit.</p>
+                  -->
+               <div class="clearfix"></div>
+               <!-- <div class="pull-right updateInfoBtn">
+                  <div class="btn btn-sm btn-info"><i class="icon-edit"></i> Update Info</div>
+               </div> -->
+               <div class="clearfix"></div>
+            </div>
+            <!-- <hr class="achievement-section" style="margin: 20px 0px;"> -->
+            <!-- <div class="achSect">
+               <div class="row" style="    background: #F1F0EB;">
+                  <div class="col-md-12" style="margin-top: 13px;">
+                     <b class="pull-left" style="margin-top: 9px;margin-left: 10px;color: gray;"> Your rating </b> <img src="http://geniusdemo.eu/ratingYo.png" style="width: 159px;float: right;" class="img-responsive">
+                  </div>
+                  <div class="col-md-6 paddingCol">
+                     <div class="col-md-12 badgeBox">
+                        <div class="pull-left badgeSmallImg"><img src="http://geniusdemo.eu/badges/pngs/social0.png"></div>
+                        <div class="pull-right badgeSmallText">
+                           <h4>Socializing</h4>
+                           - 			
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 paddingCol">
+                     <div class="col-md-12 badgeBox">
+                        <div class="pull-left badgeSmallImg"><img src="http://geniusdemo.eu/badges/pngs/chatterbox1.png"></div>
+                        <div class="pull-right badgeSmallText">
+                           <h4>Chatterbox</h4>
+                           <b>Level 1 - Spirited:</b> <i>Post 5 comments</i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 paddingCol">
+                     <div class="col-md-12 badgeBox">
+                        <div class="pull-left badgeSmallImg"><img src="http://geniusdemo.eu/badges/pngs/voter1.png"></div>
+                        <div class="pull-right badgeSmallText">
+                           <h4>Voter</h4>
+                           <b>Level 1 - Commuter:</b> <i>Vote on 5 fights</i>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-6 paddingCol">
+                     <div class="col-md-12 badgeBox">
+                        <div class="pull-left badgeSmallImg"><img src="http://geniusdemo.eu/badges/pngs/leader0.png"></div>
+                        <div class="pull-right badgeSmallText">
+                           <h4>Leader</h4>
+                           - 			
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+         </div>
+         <div class="userBioUpdateHolder" style="display: none;">
+            <h2>Edit your Profile</h2>
+            <div class="page-content updateBioHolder">
+               <div class="pull-right">
+                  <div class="userBioUpdateClose"><i></i></div>
+               </div>
+               <div class="form-style form-style-4">
+                  <form id="updateBioGeneralform" method="POST" enctype="multipart/form-data" action="http://geniusdemo.eu/user/update-general" accept-charset="UTF-8">
+                     <h3>General Info</h3>
+                     <div class="form-inputs clearfix">
+                        <p>
+                           <label class="required" for="username">Username<span>*</span></label>
+                           <input type="text" name="username" id="username" value="iSolve" disabled="">
+                        </p>
+                        <p>
+                           <label class="required" for="e-mail">E-Mail<span>*</span></label>
+                           <input type="email" name="email" id="e-mail" value="chill@gmail.com">
+                        </p>
+                        <p>
+                           <label class="required" for="firstname">First Name<span>*</span></label>
+                           <input type="text" name="firstname" id="firstname" value="Luis">
+                        </p>
+                        <p>
+                           <label class="required" for="lastname">Last Name<span>*</span></label>
+                           <input type="text" name="lastname" id="lastname" value="Salvador">
+                        </p>
+                        <p>
+                           <label class="required" for="sex">Gender<span>*</span></label>
+                           <select name="sex" id="sex" required="required">
+                              <option value="1" selected="selected">Male</option>
+                              <option value="2">Female</option>
+                           </select>
+                        </p>
+                        <p>
+                           <label for="birthdate">DoB (MM/DD/YYYY)</label>
+                           <input type="text" name="birthdate" id="birthdate" value="04/13/1988" data-min-age="-12Y" class="hasDatepicker">
+                        </p>
+                     </div>
+                     <div class="clearfix">
+                        <div class="pull-left">
+                           <label style="margin-bottom: 10px;">Profile Picture</label>
+                           <input type="file" name="avatar[]" id="avatarInput" accept="image/*" style="display: none;">
+                           <div id="avatarPreview" style="margin-bottom: 5px;"><img src="http://geniusdemo.eu/avatars/u38532.jpg?ver=I50TCR" class="avatarUploadPreview"></div>
+                           <div id="avatarClickable" class="btn btn-xs btn-primary"><i class="icon-camera"></i> Select Picture</div>
+                        </div>
+                        <div class="pull-right" style="width: 49%;">
+                           <p>
+                              <label for="website">Website</label>
+                              <input type="text" name="website" id="website" value="">
+                           </p>
+                           <p>
+                              <label for="country">Country</label>
+                              <input type="text" name="country" id="country" value="">
+                           </p>
+                           <p>
+                              <label for="bio">About Me</label>
+                              <textarea name="bio" id="bio">I'm here to run shit.</textarea>
+                           </p>
+                        </div>
+                     </div>
+                     <p class="form-submit"><input type="button" value="Update General Info" class="button color small login-submit submit submitGeneral" data-url="http://geniusdemo.eu/user/validate-general"></p>
+                  </form>
+                  <form id="updateBioPasswordform">
+                     <input type="hidden" name="_token" value="MAxFNutqfeUNLsc9jY3ogPzrhxaKu32iwzGsUt3A">
+                     <h3 style="margin-top: 20px;">Change your password</h3>
+                     <div class="form-inputs clearfix">
+                        <p>
+                           <label class="required" for="password">Password<span>*</span></label>
+                           <input type="password" name="password" id="password">
+                        </p>
+                        <p>
+                           <label class="required" for="password_confirmation">Confirm Password<span>*</span></label>
+                           <input type="password" name="password_confirmation" id="password_confirmation">
+                        </p>
+                     </div>
+                     <p class="form-submit"><input type="button" value="Update Password" class="button color small login-submit submit submitPassword" data-url="http://geniusdemo.eu/user/update-password"></p>
+                  </form>
+                  <form id="updateBioSocialform" class="form-inline">
+                     <h3 style="margin-top: 20px;">Social Media</h3>
+                     <div class="form-inputs clearfix">
+                        <div>
+                           <div class="form-group">
+                              <label for="facebook">Facebook</label>
+                              <div class="input-group">
+                                 <div class="input-group-addon">https://www.facebook.com/</div>
+                                 <input type="text" name="facebook" id="facebook" value="">
+                              </div>
+                           </div>
+                           <div class="form-group pull-right">
+                              <label for="twitter">Twitter</label>
+                              <div class="input-group">
+                                 <div class="input-group-addon">https://twitter.com/</div>
+                                 <input type="text" name="twitter" id="twitter" value="">
+                              </div>
+                           </div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                           <div class="form-group">
+                              <label for="linkedin">Linkedin</label>
+                              <div class="input-group">
+                                 <div class="input-group-addon">https://www.linkedin.com/</div>
+                                 <input type="text" name="linkedin" id="linkedin" value="">
+                              </div>
+                           </div>
+                           <div class="form-group pull-right">
+                              <label for="googleplus">Google plus</label>
+                              <div class="input-group">
+                                 <div class="input-group-addon">https://plus.google.com/</div>
+                                 <input type="text" name="googleplus" id="googleplus" value="">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <p class="form-submit"><input type="button" value="Update Social Media" class="button color small login-submit submit submitSocial" data-url="http://geniusdemo.eu/user/update-social"></p>
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+         <div class="page-content page-content-user-profile">
+            <div class="user-profile-widget">
+               <h2>User Stats</h2>
+               <div class="ul_list ul_list-icon-ok ryanList">
+                  <ul>
+                     <li><i class="icon-pushpin"></i><a>Fights<span> ( <span>{{ (statsLoaded && statsCount?.fights) || '-'}}</span> ) </span></a></li>
+                     <li><i class="icon-comment"></i><a>Comments<span> ( <span>{{ (statsLoaded && statsCount?.comments) || '-'}}</span> ) </span></a></li>
+                     <li><i class="icon-trophy"></i><a>Fights Won<span> ( <span>{{ (statsLoaded && statsCount?.fightsWon) || '-'}}</span> ) </span></a></li>
+                     <li><i class="icon-asterisk"></i><a>Votes<span> ( <span>{{ (statsLoaded && statsCount?.fightVotes) || '-'}}</span> ) </span></a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+         <div class="page-content page-content-activity" id="activity-panel">
+            <h2>Latest Activity</h2>
+            <div class="actArticles" *ngIf="statsLoaded">
+               <div *ngFor="let activity of activities" class="question user-question user-points activity-comment activity-post" style="display: block;">
+                  <div class="question-content">
+                     <div class="question-bottom row">
+                        <div class="col-md-7">
+                           <div class="bgImageHolder">
+                              <div class="bgImageLeft"></div>
+                              <div class="bgImageRight"></div>
+                           </div>
+                           <!-- <div class="activity-text">
+                              <p><span class="comment-avatar"><a class="user-popover" data-user-id="38" data-original-title="" title="">
+                                 <img alt="iSolve" src="http://geniusdemo.eu/avatars/u38532.jpg?ver=I50TCR">
+                                 </a></span> <a class="colormain" href="http://geniusdemo.eu/profile/38">iSolve</a> commented on a <a class="colormain" href="http://geniusdemo.eu/fight/57">fight</a>
+                              </p>
+                           </div> -->
+                        	<div><span [innerHTML]="activity.actObj.text"></span></div>
+                        </div>
+                        <div class="col-md-5"><span class="question-date"><i class="icon-time"></i>{{ activity.actDate | amTimeAgo }}</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="clearfix"></div>
+      </div>
+   </div>
+   <div class="col-md-3">
+      <!-- <recent-activity [userId]="user._id"></recent-activity> -->
+   </div>
+</div>
+</div>

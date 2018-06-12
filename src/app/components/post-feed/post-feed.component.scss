@@ -1,0 +1,18 @@
+.post-feed {
+
+}
+
+ul.tabs::after {
+    width: 100%;
+    display: inline-block;
+    content: ".";
+    visibility: hidden;
+}
+
+ul.tabs li.tab {
+    display: inline;
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    margin-right: 22px;
+}

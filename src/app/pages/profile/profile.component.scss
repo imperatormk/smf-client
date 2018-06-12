@@ -1,0 +1,479 @@
+#post-fight-wrapper{
+	margin-bottom: 12px;
+}
+#post-fight-form{
+	clear: both;
+	display: none;
+    padding: 8px 20px;
+	/*margin-top: 10px;*/
+}
+#post-fight-form .tab-content {
+	min-height: 245px;
+	height: 100%;
+}
+#post-fight-form input, #post-fight-form textarea {
+	margin-top: 5px;
+	margin-bottom: 0px;
+	-webkit-transition: border-color 1s linear; /* Saf3.2+, Chrome */
+	-moz-transition: border-color 1s linear; /* FF3.7+ */
+	-o-transition: border-color 1s linear; /* Opera 10.5 */
+	transition: border-color 1s linear;
+}
+#post-fight-form textarea {
+	padding-left: 8px;
+	padding-right: 8px;
+	resize: none;
+}
+.mentions-input-box .mentions{
+	display: none;
+}
+#post-fight-form #add-options {
+	margin-top: 12px;
+}
+#post-fight-toggle{
+	margin:0;
+	cursor: pointer;
+	text-align: center;
+    font-size: 36px;
+}
+#post-fight-form fieldset{
+	border: 0;
+	padding: 4px;
+}
+#post-fight-form legend{
+	font-weight: 600;
+}
+#post-fight-form .accordion-title{
+    text-align: left;
+}
+#post-fight-form .accordion-title.active a:hover{
+	color: white;
+}
+#post-fight-form .post-help{
+	font-style: italic;
+	font-size: 13px;
+	display: block;
+	clear:both;
+}
+#post-fight-form .myside{
+	box-shadow: 0px 0px 6px rgb(250, 224, 87);
+}
+#post-fight-form .chzn-container .chzn-results .active-result{
+	line-height: 1.2em;
+	font-size: 1.4em;
+	text-indent: 10px;
+}
+#post-fight-form input[type="checkbox"]{
+	outline: 0;
+	vertical-align: bottom;
+}
+#post-fight-tabs {
+	/*margin-top: 10px;*/
+    border:0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 6px;
+}
+#post-fight-tabs i {
+	margin-right: 0px !important;
+}
+#postFightPreview {
+	margin-top: 15px;
+}
+#postfight-duration {
+	margin-top: 5px;
+}
+.fileUploadPreview img {
+	border: 1px solid #dddddd;
+	padding: 3px;
+	margin-bottom: 5px;
+}
+#post-fight-form .col-xs-4 {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#post-fight-tabs li:last-child{
+    float: right;
+}
+#post-fight-tabs li a {
+	cursor: pointer;
+}
+#post-fight-tabs li.active a {
+	cursor: default;
+}
+#post-fight-tabs li a.warning {
+	background-color: #ff7361;
+}
+#post-fight-p{
+	display: none;
+}
+#post-fight-form #post-days {
+	font-size: 1.2em;
+	color:#ff7361;
+	font-weight: bold;
+}
+.post-fight-icon-circle {
+    height: 36px;
+    width: 36px;
+    font-size: 22px;
+    line-height: 36px;
+    color: white;
+    vertical-align: middle;
+    background-color: #ff7361;
+}
+
+.post-fight-icon-circle i {
+	margin-right: 0 !important;
+}
+.post-fight-icon-close {
+	float: right;
+	/*margin-right: -15px;*/
+}
+.post-fight-icon-close i:before {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: rgba(255, 115, 97, 0.8);
+	cursor: pointer;
+}
+#postFightPublicPrivate.dd-container img {
+    height: 32px;
+    opacity: 0.8;
+    width: 32px;
+}
+#postFightPublicPrivate .dd-select, #postFightPublicPrivate .dd-options li {
+	min-width: 216px;
+	padding-bottom: 0px;
+}
+#postFightPublicPrivate .dd-selected, #postFightPublicPrivate .dd-option {
+	padding: 8px;
+}
+#postFightPublicPrivate .dd-selected-text, #postFightPublicPrivate .dd-option-text {
+	line-height: 15px;
+}
+.post-fight-tabs-nav{	
+  color: black;
+  font-size: 20px;
+}
+.tab-pane h4{
+	margin-bottom: 4px;
+}
+
+.widget ul li.input{
+	overflow: initial;
+}
+.dz-progress{
+	display: none;
+}
+#post-fight-form.dropzone{
+	border:none;
+}
+.post-attachment-delete-link{
+	position: absolute;
+	top: -2px;
+	right: 0;
+	z-index: 99;
+}
+.post-attachment-delete-link i:before {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: rgb(255, 115, 97);
+	cursor: pointer;
+}
+
+///////////////////////////////////////////////////////////
+
+.page-content{
+	height: auto;
+	margin-bottom: 30px;
+}
+.panel-toggler{
+	cursor: pointer;
+}
+.page-content-activity{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/*--- USER BIO ---*/
+.user-profile-img {
+	width: 100px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	padding: 2px;
+	border: 1px solid #e0e0e0;
+	background-color: #ffffff;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.user-profile-img img {
+	width: 100%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+.userBioHolder .updateInfoBtn {
+	margin-right: 10px;
+}
+#activity-panel article.question .padding20 .displayInlineBlock.icon{
+	margin-left: 2px;
+  	margin-right: 2px;
+}
+#activity-panel article.question .padding20 > * {
+	display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+	.about-user ul li span.pull-right {
+		float: none !important;
+		display: inline-block;
+	}
+	.userBioHolder .updateInfoBtn.pull-right {
+		float: none !important;
+	}
+	#activity-panel article.question {
+		padding: 7px;
+	}
+	#activity-panel article.question h3 {
+		margin: 0;
+    	padding: 0;
+	}
+	#activity-panel article.question .question-date {
+		margin-bottom: 0 !important;
+	}
+}
+.userProfile.userPopover .btnsHolder {
+	border-top: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+
+/*--- USER BADGES ---*/
+.achievement-section-alt {
+	display: none;
+}
+#trophy-case > hr {
+	margin-bottom: 24px;
+	margin-top:10px;
+}
+.achievement-levels-list {
+	min-height: 220px;
+}
+.achievement-level.locked {
+	color: #eaeaea;
+}
+.current-achievement {
+	text-align: center;
+}
+.current-achievement > img {
+	width: 100%;
+}
+.current-achievement .progressbar {
+	width: 100%;
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: visible;
+	vertical-align: middle;
+}
+.progressbar-text {
+	vertical-align: middle;
+	font-size: 18px;
+	font-style: bold;
+	display: none;
+}
+
+
+/*--- USER BADGES SMALL ---*/
+.badgeSmallImg {
+	width: 30%;
+}
+.badgeSmallImg img {
+	width: 92%;
+}
+.badgeSmallText {
+	width: 70%;
+	font-size: 13px;
+	line-height: 16px;
+}
+.badgeSmallText h4 {
+	margin-bottom: 2px;
+}
+
+
+/*--- USER FRIENDS ---*/
+.userprofileFriendsHolder li {
+	/*margin: 7px;*/
+	overflow: visible !important;
+}
+.userprofileFriendsImg {
+	display: inline-block;
+	vertical-align: top;
+}
+.userprofileFriendsImg img {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #dedede;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	padding: 2px;
+}
+.userprofileFriendsInfo {
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 10px;
+    text-align: left;
+}
+.userprofileFriendsInfo ul li {
+	padding: 0px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+.userprofileFriendsInfo ul li i {
+	margin-right: 5px;
+}
+.userprofileFriendsInfo ul li.name {
+	font-size: 16px;
+  	max-width: 100px;
+	word-wrap: break-word;
+	word-break: break-word;
+}
+.userprofileFriendsHolder .userprofileFriendsInfo ul li.name {
+  	max-width: 140px;
+}
+.userprofileFriendsInfo ul li:last-child {
+    position: relative;
+    left: -5px;
+}
+
+/*--- USER OPTIONS ---*/
+.userprofileOptionsHolder > div {
+	margin: 4px 0px;
+}
+.userprofileOptionsHolder a {
+	text-decoration: none;
+}
+.userprofileOptionsHolder .dd-select, .userprofileOptionsHolder .dd-options li {
+	min-width: 170px;
+	padding-bottom: 0px;
+}
+.userprofileOptionsHolder .dd-container img {
+	width: 32px;
+	height: 32px;
+	opacity: 0.8;
+}
+.userprofileOptionsHolder .dd-selected, .userprofileOptionsHolder .dd-option {
+	padding: 8px;
+}
+.userprofileOptionsHolder .dd-selected-text, .userprofileOptionsHolder .dd-option-text {
+	line-height: 15px;
+}
+
+
+/*--- LATEST ACTIVITY ---*/
+.question-bottom h3 img {
+	width: 24px;
+}
+
+
+/*--- EDIT PROFILE ---*/
+.userBioUpdateClose i:before {
+	content: "\f00d";
+	font-family: "FontAwesome";
+	font-size: 24px;
+	color: rgba(255, 115, 97, 0.8);
+	cursor: pointer;
+}
+.userBioUpdateHolder .form-group {
+	width: 49%;
+}
+.userBioUpdateHolder .input-group-addon {
+	width: 1% !important;
+	font-size: 13px;
+}
+
+
+/*--- FEEDS ---*/
+.accordionFeeds .accordion-title {
+	background-color: rgba(255, 115, 97, 0.8);
+	height: 27px;
+	line-height: 26px;
+	color: #ffffff;
+	font-size: 13px;
+	text-indent: 6px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+.accordionFeeds .accordion-title.active, .accordionFeeds .accordion-title:hover {
+	background-color: rgba(255, 115, 97, 1);
+}
+.accordionFeeds .accordion-inner {
+	background-color: #f9f9f9;
+	padding: 10px 5px;
+	font-size: 12px;
+}
+.accordionFeeds .accordion-inner input {
+	padding: 3px;
+	width: 100%;
+	margin-bottom: 5px;
+	background-color: #ffffff;
+}
+.accordionFeeds .accordion-inner .chzn-container .chzn-choices li.search-choice {
+	padding: 4px 17px 4px 4px;
+}
+.accordionFeeds .accordion-inner .chzn-container-multi .chzn-choices .search-choice .search-choice-close {
+    top: 5px !important;
+}
+.accordionFeeds .accordion-inner input[type="checkbox"] {
+	height: 13px;
+}
+.accordionFeeds .accordion-inner .buttons {
+	display: inline-block;
+	margin-right: 4px;
+}
+.accordionFeeds .accordion-inner .buttons i {
+	margin-right: 0px;
+}
+.accordionFeeds .accordion-inner .buttons span {
+	width: 24px;
+}
+.user-question {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 0 -29px;
+}
+.user-question h3 {
+    font-size: 17px;
+}
+.friendslist{
+    text-align: justify;
+}
+#user_friends_modal .friendslist>li{
+    display: inline-block;
+    margin: 8px;
+}
+#activity-panel .fight-author{
+	display: inline-block;
+	display: none;
+	vertical-align: middle;
+	width: 38px;
+  	height: 38px;
+}
+#activity-panel .fight-author img{
+	width: 38px;
+	height: 38px;
+}
+.colormain, .colorlight{
+	font-weight: bold;
+}
+#user-fights-panel li.fight-category{
+	display: inline-block;
+	margin-top: 0;
+}
+.badgeBox {
+	height: 100%;
+}

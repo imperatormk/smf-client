@@ -1,0 +1,23 @@
+<div class="feed-cont">
+	<new-fight></new-fight>
+	<div>
+    	<ul class="tabs">
+        	<li class="tab"><input type="radio" value="0" name="filter" checked="checked" [(ngModel)]="filterType" > Recent</li>
+    		<li class="tab"><input type="radio" value="1" name="filter" [(ngModel)]="filterType" > Tag</li>
+        </ul>
+    	<div class="input-group" *ngIf="filterType == 1">
+        	<input type="text" [(ngModel)]="tagConfig.tagText" class="form-control">
+  			<span class="input-group-btn">
+    			<button class="btn btn-default" (click)="searchByTag()" type="button">Go!</button>
+            </span>
+        </div>
+    	<div *ngIf="filterType == 1"><br></div>
+	</div>
+	<fight *ngFor="let fight of fights" [fight]="fight"></fight>
+	<br>
+	<div style="text-align: center;">
+		<button class="btn btn-default" *ngIf="!endReached && !fightsLoading" (click)="getMoreFights()">Get more fights</button>
+    	<p *ngIf="endReached && !fightsLoading"><i>We seem to have run out of fights :/</i></p>
+	</div>
+	<br>
+</div>

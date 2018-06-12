@@ -1,0 +1,4 @@
+smf-ang@0.0.0 /var/www/html/todoAPIjs/public/smfAng
+├── jquery@3.3.1 
+└── UNMET PEER DEPENDENCY popper.js@^1.11.0
+
