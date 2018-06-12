@@ -14,6 +14,7 @@ export class SocketService {
 
     public initSocket(): void {
     	var options = {
+            hostname: '173.212.213.101',
   			port: 3000,
         	autoReconnect: true
 		};
